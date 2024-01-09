@@ -23,16 +23,17 @@ public class TestCity {
 //		// On modifie la valeur nbrPeople avec l'accesseur setNbrPeople :
 //		toulouse.setNbrPeople(-200);
 		
-		// On modifie la valeur nbrPeople de l'instance toulouse avec la méthode subPeople() :
-		toulouse.addPeople(-1);
-		
- 		System.out.println("Nombre d'habitant après modification : " + toulouse.getNbrPeople());
+//		// On modifie la valeur nbrPeople de l'instance toulouse avec la méthode subPeople() :
+//		toulouse.addPeople(-100000);
+//		
+// 		System.out.println("Nombre d'habitant après modification : " + toulouse.getNbrPeople());
  		
 // 		City rabat = new City("Rabat", 577000);
 // 		System.out.println("[Ville : " + rabat.getCityName() + "] [Pays : " + rabat.getCountry() + "] + [Nombre d'habitants : " + rabat.getNbrPeople() + "]");
 // 		rabat.setCountry("Maroc");
 // 		System.out.println("[Ville : " + rabat.getCityName() + "] [Pays : " + rabat.getCountry() + "] + [Nombre d'habitants : " + rabat.getNbrPeople() + "]");
-
+		
+		toulouse.displayCity();
 	}
 
 }

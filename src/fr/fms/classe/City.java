@@ -59,6 +59,6 @@ public class City { // Classe City :
 	}
 	
 	public void displayCity() {
-		System.out.println("Ville de " + this.cityName + " en " + this.country);
+		System.out.println("Ville de " + this.cityName + " en " + this.country + " ayant une population de " + this.nbrPeople);
 	}
 }
