@@ -28,6 +28,12 @@ public class TestCity {
 		toulouse.subPeople(100000);
 		
  		System.out.println("Nombre d'habitant après modification : " + toulouse.getNbrPeople());
+ 		
+ 		City rabat = new City("Rabat", 577000);
+ 		System.out.println("[Ville : " + rabat.getCityName() + "] [Pays : " + rabat.getCountry() + "] + [Nombre d'habitants : " + rabat.getNbrPeople() + "]");
+ 		rabat.setCountry("Maroc");
+ 		System.out.println("[Ville : " + rabat.getCityName() + "] [Pays : " + rabat.getCountry() + "] + [Nombre d'habitants : " + rabat.getNbrPeople() + "]");
+
 	}
 
 }
