@@ -21,6 +21,12 @@ public class City { // Classe City :
 		setNbrPeople(nbrPeople);
 	}
 	
+	public City(String cityName, String country) {
+		this.cityName = cityName;
+		this.country = country;
+		this.nbrPeople = 0;
+	}
+	
 	// Accesseur (getter et setter) :
 	public String getCityName() {
 		return cityName;
