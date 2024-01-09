@@ -1,30 +1,28 @@
 package fr.fms.classe;
-import java.util.*;
-
 
 public class City { // Classe City :
 	// Attributs :
 	public String cityName;			// Nom de la ville
 	public String country;			// Pays
-	public int nbrPeople;		// Nombre d'habitants
+	private int nbrPeople;		// Nombre d'habitants
 	
 	// Constructeurs :
 	public City(String cityName, String country, int nbrPeople) {
 		this.cityName = cityName;
 		this.country = country;
-		this.nbrPeople = nbrPeople;
+		setNbrPeople(nbrPeople);
 	}
 	
 	// Accesseur (getter et setter) :
-	public String getCityName(String cityName) {
+	public String getCityName() {
 		return cityName;
 	}
 	
-	public String getCountry(String country) {
+	public String getCountry() {
 		return country;
 	}
 	
-	public int getNbrPeople(int nbrPeople) {
+	public int getNbrPeople() {
 		return nbrPeople;
 	}
 	
@@ -37,8 +35,20 @@ public class City { // Classe City :
 	}
 	
 	public void setNbrPeople(int nbrPeople) {
-		if(nbrPeople < 0) 
-			throw new RunTimeException("Le nombre d'habitant ne peut être négatif !");
+		// Si nbrPeople inferieur à 0, alors on return :
+		if(nbrPeople < 0) {
+			System.out.println("Le nombre d'habitant ne peut être négatif");
+			return;
+		}
 		this.nbrPeople = nbrPeople;
+	}
+	
+	// Méthode de classe :
+	public void subPeople(int peopleToSub) {
+		if(peopleToSub > this.nbrPeople) {
+			System.out.println("Le nombre d'habitant ne peut être négatif");
+			return;
+		}
+		this.nbrPeople = this.nbrPeople - peopleToSub;
 	}
 }
