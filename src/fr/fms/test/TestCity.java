@@ -33,7 +33,12 @@ public class TestCity {
 // 		rabat.setCountry("Maroc");
 // 		System.out.println("[Ville : " + rabat.getCityName() + "] [Pays : " + rabat.getCountry() + "] + [Nombre d'habitants : " + rabat.getNbrPeople() + "]");
 		
-		toulouse.displayCity();
+//		toulouse.displayCity();
+		
+//		System.out.println(toulouse); // -> Cela affiche "fr.fms.classe.City@15db9742" c'est l'emplacement mémoire de notre instance toulouse.
+		
+		System.out.println(toulouse);
+		System.out.println(City.nbrCity);
 	}
 
 }
