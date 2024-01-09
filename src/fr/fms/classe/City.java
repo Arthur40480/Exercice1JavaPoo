@@ -50,11 +50,15 @@ public class City { // Classe City :
 	}
 	
 	// Méthode de classe :
-	public void subPeople(int peopleToSub) {
-		if(peopleToSub > this.nbrPeople) {
-			System.out.println("Le nombre d'habitant ne peut être négatif");
+	public void addPeople(int peopleToAdd) {
+		if(this.nbrPeople > (this.nbrPeople + peopleToAdd)) {
+			System.out.println("Impossible de réduire la population !");
 			return;
 		}
-		this.nbrPeople = this.nbrPeople - peopleToSub;
+		this.nbrPeople = this.nbrPeople + peopleToAdd;
+	}
+	
+	public void displayCity() {
+		System.out.println("Ville de " + this.cityName + " en " + this.country);
 	}
 }
