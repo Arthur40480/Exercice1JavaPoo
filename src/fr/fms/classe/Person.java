@@ -1,6 +1,5 @@
 package fr.fms.classe;
 
-import fr.fms.classe.*;
 public class Person {
 	// Attributs :
 	public String lastName;		// Nom
@@ -15,8 +14,7 @@ public class Person {
 		this.name = name;
 		this.age = age;
 		this.adress = adress;
-		this.bornCity = bornCity;
-		
+		this.bornCity = bornCity;	
 	}
 	
 	public Person(String lastName, String name, int age) {
@@ -33,6 +31,21 @@ public class Person {
 		this.age = 0;
 		this.adress = "unknow";
 		this.bornCity = new City("Bornnul", "unknow");
+	}
+	
+	// Méthode de classe :
+	// Méthode de classe permettant d'utiliser system.out.println() directement sur l'objet en question :
+	public String toString() {
+		if(!this.bornCity.getCityName().equals("Bornnul")) {
+			return "[lastName= " + this.lastName + ", firstName= " + this.name + ", âge= " + this.age + 
+					", adress=" + this.adress + "] BornCity [name= " + this.bornCity.getCityName() + ", state= " 
+					+ this.bornCity.getCountry() + ", nbInhabitants= " + this.bornCity.getNbrInhabitant() + "]";
+
+		} else {
+			return "[lastName= " + this.lastName + ", firstName= " + this.name + ", âge= " + this.age + 
+					", adress= " + this.adress + "] Bornnull";
+
+		}
 	}
 	
 	// Accesseur (getter et setter) :
@@ -67,21 +80,5 @@ public class Person {
 	public void setAdress(String adress) {
 		this.adress = adress;
 	}
-	
-	// Méthode de classe :
-	@Override
-	// Méthode de classe permettant d'utiliser system.out.println() directement sur l'objet en question :
-	public String toString() {
-		if(!this.bornCity.cityName.equals("Bornnul")) {
-			return "[lastName= " + this.lastName + ", firstName= " + this.name + ", âge= " + this.age + 
-					", adress=" + this.adress + "] BornCity [name= " + this.bornCity.cityName + ", state= " 
-					+ this.bornCity.country + ", nbInhabitants= " + this.bornCity.getNbrPeople() + "]";
-
-		} else {
-			return "[lastName= " + this.lastName + ", firstName= " + this.name + ", âge= " + this.age + 
-					", adress= " + this.adress + "] Bornnull";
-
-		}
-	}
-	
+		
 }

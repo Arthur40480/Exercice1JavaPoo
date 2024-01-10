@@ -6,13 +6,13 @@ import fr.fms.classe.*;
 public class TestPerson {
 
 	public static void main(String[] args) {
-//		Person manu = new Person("Macron", "Emmanuel", 43, "Elysee à Paris", new City("Amiens", "France"));
-//		Person poutine = new Person("Poutine", "Vladimir", 68);
-//		Person biden = new Person("Biden", "Joe");
-//		
-//		System.out.println(manu);
-//		System.out.println(poutine);
-//		System.out.println(biden);
+		Person emmanuel = new Person("Macron", "Emmanuel", 43, "Elysee à Paris", new City("Amiens", "France"));
+		Person poutine = new Person("Poutine", "Vladimir", 68);
+		Person biden = new Person("Biden", "Joe");
+		
+		System.out.println(emmanuel);
+		System.out.println(poutine);
+		System.out.println(biden);
 		
 		// On créer la Liste qui contiendra les personalités :
 		ArrayList<Person> personalityList = new ArrayList<>();
@@ -46,7 +46,7 @@ public class TestPerson {
 			// Si Paris est trouver dans person.getAdress() OU que person.cityBorn.getCountry() vaut "France" alors :
 			if(test != -1 || person.bornCity.getCountry().equals("France")) {
 				// Si la population de la City est égale à 0 alors :
-				if(person.bornCity.getNbrPeople() == 0) {
+				if(person.bornCity.getNbrInhabitant() == 0) {
 					System.out.println(person.getLastName() + " , " + person.getName() 
 					+ " , " + person.getAge() + " , habitant " + person.getAdress() 
 					+ " , Ville de naissance : " + person.bornCity.getCityName() + " , " +
@@ -57,7 +57,7 @@ public class TestPerson {
 					+ " , " + person.getAge() + " , habitant " + person.getAdress() 
 					+ " , Ville de naissance : " + person.bornCity.getCityName() + " , " +
 					person.bornCity.getCountry() + " , population " + person.bornCity.getCityName()
-					+ " " + person.bornCity.getNbrPeople() + " d'habitants");
+					+ " " + person.bornCity.getNbrInhabitant() + " d'habitants");
 				}
 			}
 		}	
