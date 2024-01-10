@@ -35,6 +35,39 @@ public class Person {
 		this.bornCity = new City("Bornnul", "unknow");
 	}
 	
+	// Accesseur (getter et setter) :
+	public String getLastName() {
+		return this.lastName;
+	}
+	
+	public String getName() {
+		return this.name;
+	}
+	
+	public int getAge() {
+		return this.age;
+	}
+	
+	public String getAdress() {
+		return this.adress;
+	}
+	
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+	
+	public void setName(String name) {
+		this.name = name;
+	}
+	
+	public void setAge(int age) {
+		this.age = age;
+	}
+	
+	public void setAdress(String adress) {
+		this.adress = adress;
+	}
+	
 	// Méthode de classe :
 	@Override
 	// Méthode de classe permettant d'utiliser system.out.println() directement sur l'objet en question :
