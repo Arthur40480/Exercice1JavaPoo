@@ -14,7 +14,7 @@ public class Person {
 		this.name = name;
 		this.age = age;
 		this.adress = adress;
-		this.bornCity = bornCity;	
+		this.bornCity = new City(bornCity.getCityName(), bornCity.getCountry(), bornCity.getNbrInhabitant());	
 	}
 	
 	public Person(String lastName, String name, int age) {
