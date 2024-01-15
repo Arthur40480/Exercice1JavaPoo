@@ -5,7 +5,7 @@ public class City { // Classe City :
 	private String cityName;					// Nom de la ville
 	private String country;					// Pays
 	private int nbrInhabitant;				// Nombre d'habitants	
-	public static int nbrCity = 0; 			// Nombre de city
+	private static int nbrCity = 0; 			// Nombre de city
 	
 	final int MIN_INHABITANT = 0;			// Nombre minimum d'habitant
 	
@@ -30,6 +30,10 @@ public class City { // Classe City :
 	}
 	
 	// Accesseur (getter et setter) :
+	public int getCounter() {
+		return nbrCity;
+	}
+	
 	public String getCityName() {
 		return cityName;
 	}
@@ -71,11 +75,11 @@ public class City { // Classe City :
 	}
 	// Méthode de classe permettant d'afficher les attributs d'une instance de l'objet City :
 	public void displayCity() {
-		System.out.println("Ville de " + this.cityName + " en " + this.country + " ayant une population de " + this.nbrInhabitant);
+		System.out.println("Ville de " + this.cityName + " en " + this.country + " ayant " + this.nbrInhabitant);
 	}
 	
 	// Méthode de classe permettant d'utiliser system.out.println() directement sur l'objet en question :
 	public String toString() {
-		return "Ville de " + this.cityName + " en " + this.country + " ayant une population de " + this.nbrInhabitant;
+		return "Ville de " + this.cityName + " en " + this.country + " ayant " + this.nbrInhabitant + " habitants";
 	}
 }
